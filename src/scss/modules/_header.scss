@@ -1,0 +1,70 @@
+/**********************************************************************
+ * Estilos del header
+ **********************************************************************/
+div.hero {
+  background-image: url(../img/encabezado.jpg);
+  height: 100vh;
+  background-position: top center;
+  background-size: cover;
+
+  div.contenido-header {
+    padding-top: 40px;
+
+    @media only screen and (min-width: $tabletSize) {
+        padding-top: 10px;
+    } // Media tablet
+  } // div.contenido-header
+  
+  nav.redes-sociales {
+    text-align: center;
+
+    a {
+      color: $enlacesHeader;
+      font-size: 2em;
+      margin-right: 20px;
+      
+      &:last-child {
+        margin-right: 0;
+      }
+    } // a
+
+  } // nav.redes-sociales a
+
+  div.informacion-evento {
+    text-align: center;
+    color: $enlacesHeader;
+
+    @media only screen and (min-width: $tabletSize) {
+      width: 70%;
+      margin: 0 auto;
+      margin-top: 50px;
+    } // Media tablet
+
+    p {
+      margin: 0;
+      display: inline;
+      font-size: 20px;
+      text-transform: uppercase;
+
+      i {
+        color: $colorIconoHeader;
+      }
+
+    } // p < informacion-evento
+
+    p.fecha {
+      float: left;
+    }
+
+    p.ciudad {
+      float: right;
+      text-align: right;
+    }
+
+
+
+  } // div.informacion-evento
+
+} // div.hero
+
+

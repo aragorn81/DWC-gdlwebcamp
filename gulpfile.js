@@ -5,6 +5,7 @@ const sass = require("gulp-sass");
 const concat = require("gulp-concat");
 const connect = require("gulp-connect");
 
+const otrosDir = ["src/img/**/*.*", "src/fonts/**/*.*"];
 /**
  * Gulp Top Level Functions:
  * gulp.task  - Define Tasks
@@ -54,10 +55,21 @@ gulp.task("copyHtml", function () {
  });
  */
 
+// Mueve otros archivos (Esto se irá modificando en el futuro
+gulp.task("otros", function () {
+    gulp.src("src/img/**/*.*")
+        .pipe(gulp.dest("dist/img"))
+        .pipe(connect.reload());
+    gulp.src("src/fonts/**/*.*")
+        .pipe(gulp.dest("dist/fonts"))
+        .pipe(connect.reload());
+});
+
 // Copy JS scripts
 gulp.task("scripts", function () {
     gulp.src("src/js/**/*.js")
-        .pipe(gulp.dest("dist/js"));
+        .pipe(gulp.dest("dist/js"))
+        .pipe(connect.reload());
     /*gulp.src("src/js/*.js")
         .pipe(concat("main.js"))
         .pipe(uglify())
@@ -67,6 +79,9 @@ gulp.task("scripts", function () {
 
 // Compile Sass
 gulp.task("styles", function () {
+    gulp.src("src/css/**/*.css")
+        .pipe(gulp.dest("dist/css"))
+        .pipe(connect.reload());
     gulp.src("src/scss/**/*.scss")
         .pipe(sass({
             // outputStyle: "compressed"
@@ -77,10 +92,11 @@ gulp.task("styles", function () {
 
 gulp.task("watch", function () {
     gulp.watch("src/js/**/*.js", ["scripts"]);
+    gulp.watch(otrosDir, ["otros"]);
     // gulp.watch("src/images/*", ["imageMin"]);
-    gulp.watch("src/scss/**/*.scss", ["styles"]);
+    gulp.watch(["src/css/**/*.css", "src/scss/**/*.scss"], ["styles"]);
     gulp.watch("src/*.html", ["copyHtml"]);
 });
 
-gulp.task("default", ["copyHtml", "scripts", "styles",
+gulp.task("default", ["copyHtml", "scripts", "styles", "otros",
     "connect", "watch"]);

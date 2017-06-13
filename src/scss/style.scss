@@ -1,5 +1,5 @@
 @import "main";
-@import "normalize";
-body {
-  background-color: #fff;
-}
+@import "common/variables";
+@import "modules/global";
+@import "modules/header";
+
