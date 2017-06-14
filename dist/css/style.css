@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
 /*
  * What follows is the result of much research on cross-browser styling.
@@ -217,7 +218,41 @@ html {
   box-sizing: inherit; }
 
 body {
-  background-color: #f2f2f2; }
+  background-color: #f2f2f2;
+  font-family: "Open Sans", sans-serif; }
+
+h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 2.4em;
+  text-transform: uppercase;
+  text-align: center; }
+  h2:after {
+    content: "";
+    margin: 0 auto;
+    background-image: url(../img/separador.png);
+    height: 30px;
+    width: 100px;
+    display: block; }
+
+.contenedor {
+  width: 98%;
+  margin: 0 auto; }
+  @media only screen and (min-width: 480px) {
+    .contenedor {
+      width: 95%; } }
+  @media only screen and (min-width: 768px) {
+    .contenedor {
+      width: 90%; } }
+  @media only screen and (min-width: 992px) {
+    .contenedor {
+      width: 90%;
+      max-width: 1100px; } }
+
+.seccion {
+  padding: 40px 0; }
+  .seccion p {
+    font-size: 1.2em;
+    text-align: center; }
 
 /**********************************************************************
  * Estilos del header
@@ -254,9 +289,91 @@ div.hero {
       font-size: 20px;
       text-transform: uppercase; }
       div.hero div.informacion-evento p i {
-        color: #fe4918; }
+        color: #fe4918;
+        font-size: 2.4rem; }
     div.hero div.informacion-evento p.fecha {
       float: left; }
     div.hero div.informacion-evento p.ciudad {
       float: right;
       text-align: right; }
+    div.hero div.informacion-evento h1.nombre-sitio {
+      font-family: "PT Sans", sans-serif;
+      font-size: 5.9vw;
+      text-transform: uppercase; }
+      @media only screen and (min-width: 768px) {
+        div.hero div.informacion-evento h1.nombre-sitio {
+          font-size: 11.5vw;
+          margin: 0; } }
+    div.hero div.informacion-evento p.slogan {
+      text-transform: none; }
+      div.hero div.informacion-evento p.slogan span {
+        font-weight: bold; }
+
+/**********************************************************************
+ * Estilos de la barra (debajo del header)
+ **********************************************************************/
+div.barra {
+  background-color: #353535;
+  padding: 20px 0;
+  /* LOGO */
+  /* NAVEGACIÓN PRINCIPAL */
+  /* MENÚ MOVIL */ }
+  div.barra div.logo {
+    width: 80%;
+    float: left; }
+    @media only screen and (min-width: 768px) {
+      div.barra div.logo {
+        width: 33%; } }
+    div.barra div.logo img {
+      width: 100%; }
+  div.barra nav.navegacion-principal {
+    display: none; }
+    @media only screen and (min-width: 768px) {
+      div.barra nav.navegacion-principal {
+        width: 67%;
+        text-align: right;
+        display: block;
+        float: right; } }
+    div.barra nav.navegacion-principal a {
+      font-family: "Oswald", sans-serif;
+      color: #ffffff;
+      font-size: 1.3em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all .3s ease;
+      width: 100%;
+      display: block;
+      text-align: center;
+      margin-bottom: 20px; }
+      @media only screen and (min-width: 768px) {
+        div.barra nav.navegacion-principal a {
+          display: inline-block;
+          margin-right: 10px;
+          margin-bottom: 0;
+          padding: 10px 10px;
+          width: auto;
+          text-align: center;
+          /*margin: 20px 10px 0 0;*/ } }
+      div.barra nav.navegacion-principal a:hover {
+        background-color: #fe4918; }
+      div.barra nav.navegacion-principal a:last-child {
+        border: 2px solid #fe4918;
+        color: #fe4918; }
+        div.barra nav.navegacion-principal a:last-child:hover {
+          color: #ffffff; }
+  div.barra div.menu-movil {
+    width: 60px;
+    display: block;
+    float: right;
+    text-align: right;
+    margin-top: 12px; }
+    div.barra div.menu-movil:hover {
+      cursor: pointer; }
+    @media only screen and (min-width: 768px) {
+      div.barra div.menu-movil {
+        display: none; } }
+    div.barra div.menu-movil span {
+      background-color: #ffffff;
+      height: 8px;
+      margin-bottom: 6px;
+      display: block; }

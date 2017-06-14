@@ -1,0 +1,93 @@
+/**********************************************************************
+ * Estilos de la barra (debajo del header)
+ **********************************************************************/
+div.barra {
+  background-color: $colorFondoBarra;
+  padding: 20px 0;
+
+  /* LOGO */
+  div.logo {
+    width: 80%;
+    float: left;
+
+    @media only screen and (min-width: $tabletSize) {
+      width: 33%;
+    }
+
+    img {
+      width: 100%;
+    }
+  } // logo > barra
+
+  /* NAVEGACIÓN PRINCIPAL */
+  nav.navegacion-principal {
+    display: none;
+    @media only screen and (min-width: $tabletSize) {
+      width: 67%;
+      text-align: right;
+      display: block;
+      float: right;
+    }
+
+    a {
+      font-family: $oswald;
+      color: $enlacesBarra;
+      font-size: 1.3em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all .3s ease;
+      width: 100%;
+      display: block;
+      text-align: center;
+      margin-bottom: 20px;
+
+      @media only screen and (min-width: $tabletSize) {
+        display: inline-block;
+        margin-right: 10px;
+        margin-bottom: 0;
+        padding: 10px 10px;
+        width: auto;
+        text-align: center;
+        /*margin: 20px 10px 0 0;*/
+      }
+
+      &:hover {
+        background-color: $enlacesBarraHoverBg;
+      }
+
+      &:last-child {
+        border: 2px solid $enlacesBarraHoverBg;
+        color: $enlacesBarraHoverBg;
+        &:hover {
+          color: $enlacesBarra;
+        } // a-last-child-hover
+      }  // a-last-child
+    } // a > navegacion-principal
+
+  } // navegacion-principal > barra
+
+  /* MENÚ MOVIL */
+  div.menu-movil {
+    width: 60px;
+    display: block;
+    float: right;
+    text-align: right;
+    margin-top: 12px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    @media only screen and (min-width: $tabletSize) {
+      display: none;
+    }
+
+    span {
+      background-color: $enlacesBarra;
+      height: 8px;
+      margin-bottom: 6px;
+      display: block;
+    }
+  } // menu-movil > barra
+
+} // barra

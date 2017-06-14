@@ -48,6 +48,7 @@ div.hero {
 
       i {
         color: $colorIconoHeader;
+        font-size: 2.4rem;
       }
 
     } // p < informacion-evento
@@ -61,7 +62,24 @@ div.hero {
       text-align: right;
     }
 
+    h1.nombre-sitio {
+      font-family: $ptSans;
+      font-size: 5.9vw;
+      text-transform: uppercase;
 
+      @media only screen and (min-width: $tabletSize) {
+        font-size: 11.5vw;
+        margin: 0;
+      }
+    }
+
+    p.slogan {
+      text-transform: none;
+
+      span {
+        font-weight: bold;
+      }
+    } // p.slogan < información-evento
 
   } // div.informacion-evento
 
