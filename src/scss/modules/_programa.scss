@@ -1,0 +1,87 @@
+/**********************************************************************
+ * Estilos del programa del evento
+ **********************************************************************/
+section.programa {
+  position: relative;
+
+  div.contenedor-video  {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  div.contenido-programa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    div.programa-evento {
+      background-color: rgba(255,255,255, .8);
+      padding: 15px;
+      margin-top: 80px;
+      @media only screen and (min-width: $tabletSize) {
+        width: 70%;
+      }
+      @media only screen and (min-width: $largeSize) {
+        width: 50%;
+      }
+
+      nav.menu-programa {
+        width: 100%;
+        border-bottom: 1px solid $colorPrograma;
+        padding-bottom: 10px;
+
+        @media only screen and (min-width: $tabletSize) {
+          display: table;
+        }
+
+        a {
+          display: block;
+          text-align: center;
+          color: $enlacesPrograma;
+          text-decoration: none;
+          font-family: $oswald;
+          margin-bottom: 10px;
+          font-size: 1.2em;
+          @media only screen and (min-width: $tabletSize) {
+            display: table-cell;
+          }
+
+          i {
+            color: $colorPrograma;
+            font-size: 1.6em;
+            margin-right: 10px;
+          } // i > a
+        } // a > nav.menu-programa
+
+      } // nav.menu-programa
+
+      div.detalle-evento {
+        margin-top: 20px;
+        border-bottom: 1px solid $enlacesPrograma;
+        padding: 0 20px;
+        &:nth-child(2) {
+          border: none;
+        }
+
+        p {
+          margin-bottom: 20px;
+          font-size: 20px;
+
+          i {
+            color: $colorPrograma;
+            font-size: 1.6em;
+            margin-right: 10px;
+          }// i > a
+
+        }
+      } // detalle-evento
+
+
+    } // programa-evento
+
+  } // contenido-programa
+
+
+} // Section - programa

@@ -5,7 +5,8 @@ const sass = require("gulp-sass");
 const concat = require("gulp-concat");
 const connect = require("gulp-connect");
 
-const otrosDir = ["src/img/**/*.*", "src/fonts/**/*.*"];
+const otrosDir = ["src/img/**/*.*", "src/fonts/**/*.*",
+    "src/video/**/*.*"];
 /**
  * Gulp Top Level Functions:
  * gulp.task  - Define Tasks
@@ -55,13 +56,16 @@ gulp.task("copyHtml", function () {
  });
  */
 
-// Mueve otros archivos (Esto se irá modificando en el futuro
+// Mueve otros archivos (Esto se irá modificando en el futuro)
 gulp.task("otros", function () {
     gulp.src("src/img/**/*.*")
         .pipe(gulp.dest("dist/img"))
         .pipe(connect.reload());
     gulp.src("src/fonts/**/*.*")
         .pipe(gulp.dest("dist/fonts"))
+        .pipe(connect.reload());
+    gulp.src("src/video/**/*.*")
+        .pipe(gulp.dest("dist/video"))
         .pipe(connect.reload());
 });
 
