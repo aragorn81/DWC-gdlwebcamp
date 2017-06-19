@@ -1,0 +1,60 @@
+/**********************************************************************
+ * Lista de Precios
+ **********************************************************************/
+ul.lista-precios {
+  & > li {
+    padding: 10px;
+
+    @media only screen and (min-width: $tabletSize) {
+      float: left;
+      width: 33%;
+    } // media
+  } // li > ul.lista-precios
+
+  div.tabla-precio {
+    border: 1px solid $tablaPrecioBorder;
+    background-color: $tablaPrecioBg;
+    padding: 40px 0;
+    text-align: center;
+    transition: all .3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+      border: 1px solid $tablaPrecioBorderHover;
+      box-shadow: 0 0 50px #666;
+
+    } // tabla-precio hover
+
+    h3 {
+      font-family: $oswald;
+      font-size: 16px;
+      text-transform: uppercase;
+    } // h3 > div.tabla-precio
+
+    p.numero {
+      color: #000000;
+      margin: 20px 0;
+    }
+
+    ul li {
+      font-family: $ptSans;
+      font-size: 14px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      color: $tablaPrecioColorLi;
+      line-height: 26px;
+
+      &:before {
+        font-family: "FontAwesome";
+        display: inline-block;
+        vertical-align: top;
+        padding: 0 5px;
+        color: green;
+        -webkit-font-smoothing: antialiased;
+        content: "\f00c";
+      }
+    } // ul li > div.tabla-precio
+  } // div.tabla-precio
+
+
+} // ul.lista-precios

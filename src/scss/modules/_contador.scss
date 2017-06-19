@@ -1,0 +1,55 @@
+/**********************************************************************
+ * Contador
+ **********************************************************************/
+.parallax::before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-filter: brightness(.8);
+  filter: brightness(.8);
+}
+
+p.numero {
+  color: $contadorColorNumero;
+  font-size: 4em;
+  margin: 0 0 10px 0;
+  font-family: $oswald;
+}
+
+div.contador {
+  position: relative;
+  height: auto;
+
+  &:before {
+    background-image: url(../img/bg-resumen.jpg);
+    content: "";
+  }
+
+  ul.resumen-evento {
+    position: relative;
+    padding: 120px 0;
+
+    li {
+      width: 50%;
+      float: left;
+      text-align: center;
+      color: $contadorColorLi;
+      text-transform: uppercase;
+      font-family: $oswald;
+      fons-size: 24px;
+
+      @media only screen and (min-width: $tabletSize) {
+          width: 25%;
+      } // li media
+
+
+    } // li
+  } // ul.resumen-evento
+} // div.contador
+

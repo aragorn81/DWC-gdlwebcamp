@@ -78,9 +78,16 @@ ul {
   font-weight: bold;
   display: inline-block;
   transition: all .3s ease;
+  border: 2px solid $colorButtonBg;
 
   &:hover {
     background-color: $colorButtonBgHover;
+  }
+
+  &.hollow, &.hollow:hover {
+    background-color: $colorButton;
+    color: $colorButtonBg;
+
   }
 }
 

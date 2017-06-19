@@ -1,0 +1,77 @@
+/**********************************************************************
+ * Testimoniales
+ **********************************************************************/
+div.testimoniales {
+  padding-bottom: 20px;
+
+  div.testimonial {
+    padding: 5px;
+
+    @media only screen and (min-width: $tabletSize) {
+      float:left;
+      width: 33.3%;
+    } // media div.testimonial
+
+    blockquote {
+      background-color: #ffffff;
+      border: 1px solid #e1e1e1;
+      position: relative;
+      margin: 0 0 10px 0;
+      padding-bottom: 20px;
+
+      p {
+        text-align: justify;
+        font-size: 1em;
+        font-family: $ptSans;
+        padding: 0 20px 0 65px;
+
+        &:before {
+          content: "\201c";
+          position: absolute;
+          left: 13px;
+          top: 8px;
+          font-size: 8rem;
+          margin: 0;
+          padding: 0;
+          line-height: 1;
+          color: $naranja;
+        }
+      } // p > blockquote
+
+
+      footer.info-testimonial {
+        padding: 0;
+
+        img {
+          float: left;
+          width: 20%;
+          border-radius: 50%;
+          margin-left: 20px;
+        }
+
+        cite {
+          text-align: left;
+          color: $naranja;
+          text-transform: uppercase;
+          font-size: 12px;
+          padding-top: 20px;
+          width: 66.6%;
+          float:right;
+          font-weight: bold;
+          font-style: normal;
+
+          span {
+            color: #000000;
+            display: block;
+            text-transform: none;
+            margin-top: 5px;
+          }
+        }
+
+
+      } // footer.info-testimonial
+
+    } // bloclkquote
+
+  } // div.testimonial
+} // div.testimoniales

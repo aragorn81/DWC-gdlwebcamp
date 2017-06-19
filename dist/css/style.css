@@ -274,9 +274,13 @@ ul {
   text-transform: uppercase;
   font-weight: bold;
   display: inline-block;
-  transition: all .3s ease; }
+  transition: all .3s ease;
+  border: 2px solid #fe4918; }
   .button:hover {
     background-color: #e33000; }
+  .button.hollow, .button.hollow:hover {
+    background-color: #ffffff;
+    color: #fe4918; }
 
 .float-right {
   float: right; }
@@ -504,3 +508,151 @@ ul.lista-invitados li {
       background-color: rgba(0, 0, 0, 0.55);
       color: #fe4918;
       transition: all .5s ease-in-out; }
+
+/**********************************************************************
+ * Contador
+ **********************************************************************/
+.parallax::before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-filter: brightness(0.8);
+  filter: brightness(0.8); }
+
+p.numero {
+  color: #fe4918;
+  font-size: 4em;
+  margin: 0 0 10px 0;
+  font-family: "Oswald", sans-serif; }
+
+div.contador {
+  position: relative;
+  height: auto; }
+  div.contador:before {
+    background-image: url(../img/bg-resumen.jpg);
+    content: ""; }
+  div.contador ul.resumen-evento {
+    position: relative;
+    padding: 120px 0; }
+    div.contador ul.resumen-evento li {
+      width: 50%;
+      float: left;
+      text-align: center;
+      color: #ffffff;
+      text-transform: uppercase;
+      font-family: "Oswald", sans-serif;
+      fons-size: 24px; }
+      @media only screen and (min-width: 768px) {
+        div.contador ul.resumen-evento li {
+          width: 25%; } }
+
+/**********************************************************************
+ * Lista de Precios
+ **********************************************************************/
+ul.lista-precios > li {
+  padding: 10px; }
+  @media only screen and (min-width: 768px) {
+    ul.lista-precios > li {
+      float: left;
+      width: 33%; } }
+
+ul.lista-precios div.tabla-precio {
+  border: 1px solid #e1e1e1;
+  background-color: #ffffff;
+  padding: 40px 0;
+  text-align: center;
+  transition: all .3s ease; }
+  ul.lista-precios div.tabla-precio:hover {
+    transform: scale(1.1);
+    border: 1px solid #fe4918;
+    box-shadow: 0 0 50px #666; }
+  ul.lista-precios div.tabla-precio h3 {
+    font-family: "Oswald", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase; }
+  ul.lista-precios div.tabla-precio p.numero {
+    color: #000000;
+    margin: 20px 0; }
+  ul.lista-precios div.tabla-precio ul li {
+    font-family: "PT Sans", sans-serif;
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #868686;
+    line-height: 26px; }
+    ul.lista-precios div.tabla-precio ul li:before {
+      font-family: "FontAwesome";
+      display: inline-block;
+      vertical-align: top;
+      padding: 0 5px;
+      color: green;
+      -webkit-font-smoothing: antialiased;
+      content: "\f00c"; }
+
+/**********************************************************************
+ * Mapa
+ **********************************************************************/
+div.mapa {
+  height: 420px;
+  background-color: green; }
+
+/**********************************************************************
+ * Testimoniales
+ **********************************************************************/
+div.testimoniales {
+  padding-bottom: 20px; }
+  div.testimoniales div.testimonial {
+    padding: 5px; }
+    @media only screen and (min-width: 768px) {
+      div.testimoniales div.testimonial {
+        float: left;
+        width: 33.3%; } }
+    div.testimoniales div.testimonial blockquote {
+      background-color: #ffffff;
+      border: 1px solid #e1e1e1;
+      position: relative;
+      margin: 0 0 10px 0;
+      padding-bottom: 20px; }
+      div.testimoniales div.testimonial blockquote p {
+        text-align: justify;
+        font-size: 1em;
+        font-family: "PT Sans", sans-serif;
+        padding: 0 20px 0 65px; }
+        div.testimoniales div.testimonial blockquote p:before {
+          content: "\201c";
+          position: absolute;
+          left: 13px;
+          top: 8px;
+          font-size: 8rem;
+          margin: 0;
+          padding: 0;
+          line-height: 1;
+          color: #fe4918; }
+      div.testimoniales div.testimonial blockquote footer.info-testimonial {
+        padding: 0; }
+        div.testimoniales div.testimonial blockquote footer.info-testimonial img {
+          float: left;
+          width: 20%;
+          border-radius: 50%;
+          margin-left: 20px; }
+        div.testimoniales div.testimonial blockquote footer.info-testimonial cite {
+          text-align: left;
+          color: #fe4918;
+          text-transform: uppercase;
+          font-size: 12px;
+          padding-top: 20px;
+          width: 66.6%;
+          float: right;
+          font-weight: bold;
+          font-style: normal; }
+          div.testimoniales div.testimonial blockquote footer.info-testimonial cite span {
+            color: #000000;
+            display: block;
+            text-transform: none;
+            margin-top: 5px; }
