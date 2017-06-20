@@ -1,0 +1,16 @@
+/**********************************************************************
+ * Estilos de la cuenta regresiva
+ **********************************************************************/
+div.cuenta-regresiva {
+  ul li {
+    text-transform: uppercase;
+    font-family: $oswald;
+    font-size: 1.6rem;
+    text-align: center;
+
+    @media only screen and (min-width: $tabletSize) {
+      width: 25%;
+      float: left;
+    }
+  } // ul li > cuenta regresiva
+} // cuenta regresiva

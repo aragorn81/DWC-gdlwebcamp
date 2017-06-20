@@ -1,0 +1,31 @@
+/**********************************************************************
+ * Estilos del newsletter
+ **********************************************************************/
+div.newsletter {
+  position: relative;
+  height: auto;
+
+  &:before {
+    background-image: url(../img/bg-newsletter.jpg);
+    content: "";
+  }
+
+  div.contenido {
+    padding: 100px 0;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+
+    p {
+      font-size: 1.2em;
+      text-transform: lowercase;
+    }
+
+    h3 {
+      color: #ffffff;
+      text-transform: uppercase;
+      font-size: 7vw;
+      font-family: $ptSans;
+    } // h3 > div.contenido
+  } // div.contenido > newsletter
+} // div.newsletter

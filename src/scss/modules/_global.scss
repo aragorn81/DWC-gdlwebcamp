@@ -80,14 +80,22 @@ ul {
   transition: all .3s ease;
   border: 2px solid $colorButtonBg;
 
+  &.transparent {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+  }
+
   &:hover {
     background-color: $colorButtonBgHover;
+  }
+
+  &.transparent:hover {
+    border: 2px solid $colorButtonBg;
   }
 
   &.hollow, &.hollow:hover {
     background-color: $colorButton;
     color: $colorButtonBg;
-
   }
 }
 
