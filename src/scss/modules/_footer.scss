@@ -1,0 +1,49 @@
+/**********************************************************************
+ * Estilos del footer principal
+ **********************************************************************/
+footer.site-footer {
+  background-color: #353535;
+  padding-top: 40px;
+  margin-top: 20px;
+
+
+  h3 {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: $oswald;
+    margin-bottom: 20px;
+    margin-top: 0;
+    span {
+      color: $naranja;
+    }
+  } // h3
+
+  .contenedor > div {
+    color: #ffffff;
+    padding: 0 20px;
+    font-size: 12px;
+    /*text-align: justify;*/
+
+    @media only screen and (min-width: $tabletSize) {
+      width: 33.3%;
+      float:left;
+    }
+  } // divs dentro del contenedor
+
+  .ultimos-tweets li {
+    margin-bottom: 10px;
+  }
+
+  nav.redes-sociales {
+    text-align: left;
+  }
+
+  p.copyright {
+    background-color: #2e2e2e;
+    color: #ffffff;
+    padding: 10px 0;
+    margin: 0;
+    margin-top: 10px;
+    text-align: center;
+  }
+} // site-footer

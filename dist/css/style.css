@@ -293,6 +293,15 @@ ul {
 /**********************************************************************
  * Estilos del header
  **********************************************************************/
+nav.redes-sociales {
+  text-align: center; }
+  nav.redes-sociales a {
+    color: #ffffff;
+    font-size: 2em;
+    margin-right: 20px; }
+    nav.redes-sociales a:last-child {
+      margin-right: 0; }
+
 div.hero {
   background-image: url(../img/encabezado.jpg);
   height: 100vh;
@@ -697,3 +706,39 @@ div.cuenta-regresiva ul li {
     div.cuenta-regresiva ul li {
       width: 25%;
       float: left; } }
+
+/**********************************************************************
+ * Estilos del footer principal
+ **********************************************************************/
+footer.site-footer {
+  background-color: #353535;
+  padding-top: 40px;
+  margin-top: 20px; }
+  footer.site-footer h3 {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    margin-bottom: 20px;
+    margin-top: 0; }
+    footer.site-footer h3 span {
+      color: #fe4918; }
+  footer.site-footer .contenedor > div {
+    color: #ffffff;
+    padding: 0 20px;
+    font-size: 12px;
+    /*text-align: justify;*/ }
+    @media only screen and (min-width: 768px) {
+      footer.site-footer .contenedor > div {
+        width: 33.3%;
+        float: left; } }
+  footer.site-footer .ultimos-tweets li {
+    margin-bottom: 10px; }
+  footer.site-footer nav.redes-sociales {
+    text-align: left; }
+  footer.site-footer p.copyright {
+    background-color: #2e2e2e;
+    color: #ffffff;
+    padding: 10px 0;
+    margin: 0;
+    margin-top: 10px;
+    text-align: center; }
