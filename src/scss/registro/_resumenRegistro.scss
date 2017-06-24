@@ -34,3 +34,16 @@
   }
 
 } // resumen
+
+#lista-productos {
+  background-color: #e1e1e1;
+  padding: 20px;
+  display: none;
+}
+
+#suma-total {
+  text-align: center;
+  font-size: 2em;
+  color: $naranja;
+  display: none;
+}
