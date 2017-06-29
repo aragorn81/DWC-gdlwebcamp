@@ -1,6 +1,10 @@
 /**********************************************************************
  * Estilos del programa del evento
  **********************************************************************/
+div.ocultar {
+  display: none;
+}
+
 section.programa {
   position: relative;
 
@@ -29,8 +33,8 @@ section.programa {
 
       nav.menu-programa {
         width: 100%;
-        border-bottom: 1px solid $colorPrograma;
-        padding-bottom: 10px;
+
+
 
         @media only screen and (min-width: $tabletSize) {
           display: table;
@@ -44,8 +48,27 @@ section.programa {
           font-family: $oswald;
           margin-bottom: 10px;
           font-size: 1.2em;
+          position: relative;
+          padding-bottom: 10px;
+          border-bottom: 1px solid $colorPrograma;
           @media only screen and (min-width: $tabletSize) {
             display: table-cell;
+          }
+
+          &.activo::after {
+            position: absolute;
+            content: "";
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            bottom: -20px;
+            height: 20px;
+            width: 30px;
+
+            background-image: url("../img/talleres-flecha.jpg");
+            background-position: top center;
+            background-repeat: no-repeat;
           }
 
           i {

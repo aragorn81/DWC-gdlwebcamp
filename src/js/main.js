@@ -151,3 +151,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
 }); // DOMContentLoaded
 })();
+
+
+$(function () {
+
+    // Programa de conferencias
+    $(".programa-evento .info-curso:first").show();
+    $(".menu-programa a:first").addClass("activo");
+    var $enalces = $(".menu-programa a");
+    $enalces.on("click", function () {
+        $(".ocultar").hide();
+        $enalces.removeClass("activo");
+        $(this).addClass("activo");
+        var enlace = $(this).attr("href");
+        $(enlace).fadeIn(1000);
+
+        return false;
+
+    });
+})();
